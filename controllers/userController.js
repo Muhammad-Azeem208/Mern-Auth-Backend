@@ -224,6 +224,7 @@ export const logout = catchError(async (req, res, next) => {
     .cookie("token", "", {
       expires: new Date(0),
       httpOnly: true,
+      secure: true,
       sameSite: "None",
     })
     .json({
